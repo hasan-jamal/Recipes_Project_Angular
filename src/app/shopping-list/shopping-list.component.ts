@@ -11,4 +11,8 @@ ingredients:Ingredient[] = [
     new Ingredient("Apple",10),
     new Ingredient("Tomato",5),
 ];
+
+oningrediantAdded(ingrediantData:Ingredient){
+  this.ingredients.push(ingrediantData);
+}
 }

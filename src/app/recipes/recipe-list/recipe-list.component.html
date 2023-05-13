@@ -5,17 +5,11 @@
 </div>
 <hr>
 <div class="row mt-3">
-    <div class="col-md-12" *ngFor="let recipe of Recipes">
-        <a href="" class="list-group-item clearfix mb-3 d-flex align-items-center">
-            <div class="left">
-                <h4 class="list-group-item-heading pb-2">{{recipe.name}}</h4>
-                <p class="list-group-item-text">{{recipe.description}}</p>
-            </div>
-            <div class="right">
-                <img  [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-responsive" 
-                style="max-height:100px; width: 130px;border-radius: 3px;margin-left: 10px;">
-            </div>
-        </a>
-        <app-recipe-item></app-recipe-item>
+    <div class="col-md-12">
+        <app-recipe-item 
+        *ngFor="let recipeEl of Recipes"
+        [recipe]="recipeEl"
+        (onRecipeSelected)="onRecipeSelect(recipeEl)"
+        ></app-recipe-item>
     </div>
 </div>
