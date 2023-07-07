@@ -4,3 +4,9 @@ body{
 a,button{
     cursor: pointer;
 }
+.dropdown-item.active, .dropdown-item:active{
+    color: #000 !important;
+}
+.list-group-item{
+    padding: 0.7rem !important;
+}
